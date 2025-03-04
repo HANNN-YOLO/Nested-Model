@@ -15,13 +15,15 @@ class awal extends StatelessWidget{
       return Data(
         id: 1 + Random().nextInt(20),
         nama: faker.faker.person.name(),
-        gambar: "https://picsum.photos/id/${index}/200/300",
+        gambar: "https://picsum.photos/id/$index/200/300",
         jumlah: 100000 + Random().nextInt(20000),
         harga: 5000000 + Random().nextInt(10000),
         deskripsi: faker.faker.lorem.sentence(),
         );
       }
     );
+
+  awal({super.key});
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -31,7 +33,7 @@ class awal extends StatelessWidget{
           style: TextStyle(
             color: Colors.white
           ),
-          ),
+        ),
         centerTitle: true,
         backgroundColor: Colors.cyan,
       ),
