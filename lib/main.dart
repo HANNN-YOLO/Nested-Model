@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import './screens/awal.dart';
-
+import './screens/afterawal.dart';
 void main(){
   runApp(app());
 }
@@ -8,11 +8,13 @@ void main(){
 class app extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: awal(),
-
+      routes: {
+        awal.nameroute : (ctx) => awal(),
+        afterawal.nameroute : (ctx) => afterawal(),
+      },
     );
   }
 }
