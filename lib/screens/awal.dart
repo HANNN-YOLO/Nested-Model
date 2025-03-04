@@ -9,7 +9,19 @@ import 'package:nested/screens/afterawal.dart';
 class awal extends StatelessWidget{
   static const nameroute = "awal";
 
-  // final List<Data> mydata = 
+  final List<Data> mydata =  List.generate(
+    20, 
+    (index){
+      return Data(
+        id: 1 + Random().nextInt(20),
+        nama: faker.faker.person.name(),
+        gambar: "https://picsum.photos/id/${index}/200/300",
+        jumlah: 100000 + Random().nextInt(20000),
+        harga: 5000000 + Random().nextInt(10000),
+        deskripsi: faker.faker.lorem.sentence(),
+        );
+      }
+    );
   @override
   Widget build(BuildContext context) {
     return Scaffold(
